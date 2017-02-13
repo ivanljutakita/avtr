@@ -11,12 +11,12 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>BRALE!</span></a>
             </div>
 
             <div class="clearfix"></div>
 
-            <!-- menu profile quick info -->
+            <!-- menu profifle quick info -->
             <?php require('menu_profile.php'); ?>
             <!-- /menu profile quick info -->
 
@@ -27,26 +27,13 @@
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-            </div>
+            
             <!-- /menu footer buttons -->
           </div>
         </div>
 
         <!-- top navigation -->
-        <?php require('top_nav.php');?>
+        <?php require('top_nav.php'); ?>
         <!-- /top navigation -->
 
         <!-- page content -->
@@ -73,8 +60,41 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
-                  <div class="x_content"></div>
-                    <h1>Proizvođači</h1>
+                  <div class="x_content">
+                  <h1>Proizvođači</h1>
+
+                    <?php 
+                        $sql = "SELECT ID, Name, Year_est FROM brands; ";
+                        $result = $mysqli->query($sql);
+                        ?>
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Year established</th>                   
+                        </tr>
+                      </thead>
+                      <tbody>
+    <?php
+    while ($brand = $result->fetch_assoc()) {
+      echo('<tr>');
+      echo('<th scope="row">' . $brand['id'] . '</th>');
+      echo('<td>' . $brand['Name'] . '</td>');
+      echo('<td>' . $brand['Year_est'] . '</td>');
+      echo('</tr>');
+    ?>
+
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,7 +113,7 @@
       </div>
     </div>
 
-<?php require('js.php'); ?>
+    <?php require('js.php'); ?>
 	
   </body>
 </html>
