@@ -1,8 +1,8 @@
-<?php require('connect.php'); ?>
+<?php require('connect.php');?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <?php require('head.php'); ?>
+    <?php require('head.php'); ?>
   </head>
 
   <body class="nav-md">
@@ -11,12 +11,12 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>BRALE!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
             </div>
 
             <div class="clearfix"></div>
 
-            <!-- menu profifle quick info -->
+            <!-- menu profile quick info -->
             <?php require('menu_profile.php'); ?>
             <!-- /menu profile quick info -->
 
@@ -61,37 +61,33 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_content">
-                  <h1>Proizvođači</h1>
+                    <h1>Proizvođači</h1>
 
-                    <?php 
-                        $sql = "SELECT ID, Name, Year_est FROM brands; ";
+                    <?php
+                        $sql = "SELECT id, name, year_est  FROM brands;";
                         $result = $mysqli->query($sql);
-                        ?>
+                    ?>
 
                     <table class="table">
                       <thead>
                         <tr>
                           <th>#</th>
                           <th>Name</th>
-                          <th>Year established</th>                   
+                          <th>Year established</th>
+                        
                         </tr>
                       </thead>
                       <tbody>
-    <?php
-    while ($brand = $result->fetch_assoc()) {
-      echo('<tr>');
-      echo('<th scope="row">' . $brand['id'] . '</th>');
-      echo('<td>' . $brand['Name'] . '</td>');
-      echo('<td>' . $brand['Year_est'] . '</td>');
-      echo('</tr>');
-    ?>
-
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
+                      <?php
+                      while ($brand = $result->fetch_assoc()) {
+                     echo('<tr>');
+                     echo('<th scope="row">' . $brand ['id'] . '</th>');
+                     echo('<td>' . $brand['name'] . '</td>');
+                     echo('<td>' . $brand['year_est'] . '</td>');
+                     echo('</tr>');
+                    }
+                      ?>
+                        
                       </tbody>
                     </table>
                   </div>
@@ -113,7 +109,7 @@
       </div>
     </div>
 
-    <?php require('js.php'); ?>
+<?php require('js.php'); ?>
 	
   </body>
 </html>
