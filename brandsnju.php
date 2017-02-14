@@ -1,8 +1,8 @@
-<?php require('connect.php');?>
+<?php require('connect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php require('head.php'); ?>
+<?php require('head.php'); ?>
   </head>
 
   <body class="nav-md">
@@ -11,7 +11,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-car"></i> <span>automobili!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -23,17 +23,17 @@
             <br />
 
             <!-- sidebar menu -->
-            <?php require('menu_sidebar.php'); ?>
+            <?php require('menu_sightbar.php'); ?>
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
-            
+         
             <!-- /menu footer buttons -->
           </div>
         </div>
 
         <!-- top navigation -->
-        <?php require('top_nav.php'); ?>
+            <?php require('top_nav.php'); ?>
         <!-- /top navigation -->
 
         <!-- page content -->
@@ -61,18 +61,33 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_content">
-                    <h1>Unos proizvođača</h1>
+                  <h1>unos proizvođača</h1>
 
-                    <form action="brands_create.php" method="post">
-                        Ime proizvođača:
-                        <input type="text" name="name"><br>
+                    <form action="brands_create.php" method="post" class="form-horizontal form-label-left">
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">ime proizvođača:</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="text" id="id" name="name" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>  
 
-                        Datum osnutka:
-                        <input type="text" name="year_est"><br>
+                    <div class="form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">ime proizvođača:</label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input type="text" id="year_est" name="year_est" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>  
+                    <div class="form-group">
+                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                      <input type="submit" value="unesi" class="btn btn-success">
+                      </div>
+                   </div>  
 
-                        <input type="submit" value="Unesi"><br>
-                    </form>
 
+                        <input type="submit" value="unesi">
+                    </form>  
+                  
+                   
                   </div>
                 </div>
               </div>
@@ -92,7 +107,7 @@
       </div>
     </div>
 
-<?php require('js.php'); ?>
+    <?php require('js.php'); ?>
 	
   </body>
 </html>
