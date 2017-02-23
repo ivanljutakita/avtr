@@ -64,7 +64,7 @@
                     <h1>Proizvođači</h1>
 
                     <?php
-                        $sql = "SELECT id, name, year_est FROM brands;";
+                        $sql = "SELECT id, name, year_est FROM brands ORDER BY name;";
                         $result = $mysqli->query($sql);
                     ?>
 
@@ -74,6 +74,7 @@
                           <th>#</th>
                           <th>Name</th>
                           <th>Year established</th>
+                          <th></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -83,6 +84,7 @@
         echo('<th scope="row">' . $brand['id'] . '</th>');
         echo('<td>' . $brand['name'] . '</td>');
         echo('<td>' . $brand['year_est'] . '</td>');
+        echo('<a href="brands_edit.php?id="' . $brand['id'] . '>izmjena</a>');
         echo('</tr>');
     }
 ?>                        

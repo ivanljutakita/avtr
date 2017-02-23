@@ -1,9 +1,9 @@
-<div class="profile clearfix">
-<div class="profile_pic">
-<img src="images/img.jpg" alt="..." class="img-circle profile_img">
-</div>
-<div class="profile_info">
-<span>Dobrodošao,</span>
-<h2>Ime Prezime</h2>
-</div>
-</div>
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Dobrodošao,</span>
+                <h2>Albert Einstein</h2>
+              </div>
+            </div>

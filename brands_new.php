@@ -63,7 +63,7 @@
                   <div class="x_content">
                     <h1>Unos</h1>
 
-                    <form action="brandkriejt.php" method="post" class="form-horizontal form-label-left">
+                    <form action="brands_create.php" method="post" class="form-horizontal form-label-left">
                         <div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Ime proizvođača:</label>
                           <div class="col-md-6 col-sm-6 col-xs-12">
